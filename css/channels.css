@@ -1,0 +1,86 @@
+/* Author and copyright notice
+ @version    2.0.2
+ @package    XpertVal64 Interface
+ @author     Vivian Vanatu <vivian.vanatu@lives-international.com>
+ @copyright  2022 Medisol SRL
+ @license    This copy is for demo purposes only. Do not copy, change or use the code with other purpose than demostrating XpertVal64 usage
+*//*div.module-one {
+  background-color: #004E6C;
+}
+div.module-two {
+  //background-color: #00658B;
+  background-color: #0179a7;
+}
+div.module-three {
+  //background-color: #0083B5;
+  background-color: #31a3cf;
+}
+div.module-four {
+  //background-color: #01B9FF;
+  background-color: #18b4ef;
+}*/
+/*Table reversed*/
+.table-reversed table {
+	display: table;
+}
+.table-reversed table tr {
+	display: table-cell;
+}
+.table-reversed table tr td {
+	display: block;
+}
+.table-reversed .table td, .table-reversed .table th {
+	padding: 0;
+	height: 81.875px;
+}
+.table td, .table th {
+	padding: 0.5rem;
+}
+.table {
+	margin-bottom: 0;
+}
+.data {
+    color: #23282c;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+.onesensor {
+	height: 48px;
+	border-right: 0px solid #c8ced3;
+	line-height: 20px;
+}
+
+.twosensors {
+	height: 48px;
+	border-left: 1px solid #c8ced3;
+	line-height: 20px;
+}
+.threesensors {
+	height: 48px;
+	border-left: 1px solid #c8ced3;
+	line-height: 20px;
+}
+.twosensors:first-child {
+    border-left: 0;
+}
+.red {
+	color: #cc0000 !important;
+}
+
+.green {
+	color: #009a77 !important;
+}
+
+.yellow {
+	color: #d29100 !important;
+}
+
+.blue {
+	color: #005b7f !important;
+}
+.align-middle p {
+    margin-bottom: 0;
+}

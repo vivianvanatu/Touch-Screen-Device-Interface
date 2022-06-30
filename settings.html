@@ -1,0 +1,376 @@
+<!-- Author and copyright notice
+ @version    2.0.2
+ @package    XpertVal64 Interface
+ @author     Vivian Vanatu <vivian.vanatu@lives-international.com>
+ @copyright  2022 Medisol SRL
+ @license    This copy is for demo purposes only. Do not copy, change or use the code with other purpose than demostrating XpertVal64 usage
+ -->
+ <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-control" content="no-cache">
+
+
+    <title></title>
+    <!-- Load Head CSS -->
+    <script type="text/javascript" src="js/head-css.js"></script>
+    <link rel="stylesheet" href="css/settings.css">
+    
+  </head>
+
+  <body>
+    <div class="main-full">
+      <div class="top-header" id="top-header"></div>
+      <div class="container">
+        <div id="settings">
+
+          <div class="row">
+            <div class="col-4">
+              <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-fvalue-config-list" data-bs-toggle="list" href="#list-fvalue-config" role="tab" aria-controls="list-fvalue-config">
+                  <i class="fa fa-check-square fa-lg mr-xlg"></i>F-Value Configuration
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-calibration-list" data-bs-toggle="list" href="#list-calibration" role="tab" aria-controls="list-calibration">
+                  <i class="fa fa-certificate fa-lg mr-xlg"></i> Calibration
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-measurement-units-list" data-bs-toggle="list" href="#list-measurement-units" role="tab" aria-controls="list-measurement-units">
+                  <i class="fa fa-adjust fa-lg mr-xlg"></i> Measurement Units
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-reg-settings-list" data-bs-toggle="list" href="#list-reg-settings" role="tab" aria-controls="list-reg-settings">
+                  <i class="fa fa-map fa-lg mr-xlg"></i> Regional Settings
+                </a>
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-communications-list" data-bs-toggle="list" href="#list-communications" role="tab" aria-controls="list-communications">
+                  <i class="fa fa-sitemap fa-lg mr-xlg"></i> Communications
+                </a>
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-display-list" data-bs-toggle="list" href="#list-display" role="tab" aria-controls="list-display">
+                  <i class="fa fa-desktop fa-lg mr-xlg"></i> Display
+                </a>
+                </a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-fvalue-config" role="tabpanel" aria-labelledby="list-fvalue-config-list">
+                  <h4>F-Value Configuration</h4>
+                    <div class="col-12">
+                      <hr class="solid mt-xs mb-xs"/>
+                      <form>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">F-Value Template</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Steam</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Z Value(C)</label>
+                            <input type="number" min="1" max="20" class="form-control" id="exampleFormControlInput1" value="10" > 
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Tb Temp.(C)</label>
+                          <input type="number" class="form-control" id="exampleFormControlInput1" value="121.1" > 
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Min Temp. to calculate F Value(C)</label>
+                          <input type="number" class="form-control" id="exampleFormControlInput1" value="118" > 
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">D Value</label>
+                          <input type="number" class="form-control" id="exampleFormControlInput1" value="1" > 
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                <div class="tab-pane fade" id="list-calibration" role="tabpanel" aria-labelledby="list-calibration-list">
+                  <h4>Calibration</h4>
+                    <div class="col-12">
+                      <hr class="solid mt-xs mb-xs"/>
+                      <form>
+                        <div class="form-group">
+                          <div class="col-12">
+                          <label for="exampleFormControlInput1">Calibration Type</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Temperature</option>
+                            <option>Humidity</option>
+                            <option>Pressure</option>
+                            <option>CO2</option>
+                          </select>
+                        </div>
+                        </div>
+                        <div class="form-group ">
+                          <div class="col-3 float-left">
+                            <label for="exampleFormControlSelect1">Show</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" value="10" > 
+                        </div>
+                        <div class="col-3 float-right">             
+                            <label for="exampleFormControlSelect1">Search</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" value="" > 
+                        </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-12">
+                          <table class="table table-condensed table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Temperature</th>
+                                <th>Max Error</th>
+                                <th>Check Time</th>
+                                <th>Adjust</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>55</td>
+                                <td>10</td>
+                                <td>00:00:30</td>
+                                <td class="center"><i class="fa fa-check green" area-hidden="true"></i></td>
+                                <td class="center blue"><a href="#"><i class="fa fa-arrow-up mr-sm" aria-hidden="true"></i></a><a href="#"><i class="fa fa-arrow-down mr-sm" aria-hidden="true"></i></a><a href="#"><i class="fa fa-edit mr-sm" aria-hidden="true"></i></a><a href="#"><i class="fa fa-trash mr-sm" aria-hidden="true"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td>50</td>
+                                <td>10</td>
+                                <td>00:00:30</td>
+                                <td></td>
+                                <td class="center blue"><a href="#"><i class="fa fa-arrow-up mr-sm" aria-hidden="true"></i></a><a href="#"><i class="fa fa-arrow-down mr-sm" aria-hidden="true"></i></a><a href="#"><i class="fa fa-edit mr-sm" aria-hidden="true"></i></a><a href="#"><i class="fa fa-trash mr-sm" aria-hidden="true"></i></a></td>
+                              </tr>
+                            </tbody>
+
+                          </table>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-12">
+                          <p class="mb-xs">Showing 1 to 2 of 2 entries</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <hr class="solid ml-md mr-md" />
+                          <div class="col-4 float-left">
+                          <label for="exampleFormControlSelect1">Drift Allowed (+/-°C)</label>
+                          <input type="number" class="form-control" id="exampleFormControlInput1" value="5" > 
+                          </div>              
+                          <div class="col-4 float-left">
+                        <label for="exampleFormControlSelect1">Dev.From Refer.Allowed (+/-°C)</label>
+                          <input type="number" class="form-control" id="exampleFormControlInput1" value="10" > 
+                          </div>
+                          <div class="col-4 float-left">
+                          <label for="exampleFormControlSelect1">Check Time for Drift (hh:mm:ss)</label>
+                          <input type="text" class="form-control" id="exampleFormControlInput1" value="00:00:20" > 
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <hr class="solid ml-md mr-md" />
+                          <p class="m-none ml-md">Timeout: </p>
+                          <div class="col-6 float-left">
+                          <label for="exampleFormControlSelect1">Days </label>
+                          <input type="text" class="form-control" id="exampleFormControlInput1" value="0" > 
+                        </div>
+                          <div class="col-6 float-left">
+                          <label for="exampleFormControlSelect1">HH:MM:SS </label>
+                          <input type="text" class="form-control" id="exampleFormControlInput1" value="00:01:00" > 
+                        </div>
+                        </div>
+                      </form>
+                    </div>                 
+                </div>
+                <div class="tab-pane fade" id="list-measurement-units" role="tabpanel" aria-labelledby="list-measurement-units-list">
+                    <h4>Measurement Units</h4>
+                    <hr>  
+                    <div class="col-12">
+                      <h5>Temperature</h5>
+                      <div class="col-6 float-left pr-xlg"> 
+                      <label for="select-unit" class="form-label">Default unit</label> 
+                      <div class="input-group">                        
+                        <select class="form-select" aria-label="Default Unit" id="select-unit">
+                          <option>°C</option>
+                          <option>°F</option>
+                          <option>K</option>
+                        </select>
+                      </div>
+                      </div>
+                      <div class="col-6 float-left pl-xlg">
+                        <label for="select-resolution" class="form-label">Resolution</label>
+                        <div class="input-group">  
+                          <select class="form-select" id="select-resolution">
+                            <option>0.01</option>
+                            <option>0.02</option>
+                            <option>0.05</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="z-value" class="form-label">Z Value(C)</label>
+                      <div class="input-group">
+                          <input type="number" min="1" max="20" class="form-control" id="z-value" value="10" > 
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="tb-temp" class="form-label">Tb Temp.(C)</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="tb-temp" value="121.1" > 
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="min-temp-f-value" class="form-label">Min Temp. to calculate F Value(C)</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="min-temp-f-value" value="118" > 
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="d-value" class="form-label">D Value</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="d-value" value="1" > 
+                      </div>
+                    
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-reg-settings" role="tabpanel" aria-labelledby="list-reg-settings-list">
+                    <h4>Regional Settings</h4>
+                    <div class="col-12">
+                      <hr class="solid"/>
+                      <form>
+                      <div class="form-group">
+                          <label for="exampleFormControlInput1">Language</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Deutsch</option>
+                            <option selected="selected">English</option>
+                            <option>French</option>
+                            <option>Japanese</option>
+                           <option>Spanish</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleFormControlSelect1">Date Format</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                              <option>DD.MM.YYYY</option>
+                              <option>YYYY.MM.DD</option>
+                              <option>MM.DD.YYYY</option>
+                              <option>YYYY.DD.MM</option>
+                              <option>DD/MM/YYYY</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleFormControlSelect1">Time zone</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Auto Detect</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleFormControlSelect1">Date Format</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                              <option>HH:mm:ss</option>
+                              <option>HH:mm:ss xm</option>
+                              <option>HH:mm</option>
+                              <option>HH:mm xm</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <p><i>Example format: 30.09.2021 10:59:54</i></p>
+                      </div>  
+                    </form>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="list-communications" role="tabpanel" aria-labelledby="list-communications-list">
+                    <h4>Communications</h4>
+                    <div class="col-12">
+                      <hr class="solid"/>
+                      
+                          <div class="col-12 mb-lg">
+                            <h4>Wi-Fi Connection</h4>
+                            <label for="wifiNetworks" class="form-label">Enable/Disable Wi-Fi</label>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa fa-wifi mr-md" aria-hidden="true"></i>WiFi</span>
+                              <select class="form-select" aria-label="Enable/Disable Wi-Fi" id="wifiNetworks">
+                                <option value="1">Enabled</option>
+                                <option value="0">Disabled</option>
+                              </select>
+                              <button class="btn btn-lg btn-info" type="button">Wi-fi Networks</button>
+                            </div>
+                          </div>
+                          <hr />
+                          <div class="col-12 mb-lg">
+                            <h4>Network</h4>
+                            <label for="networkSettings" class="form-label">Enable/Disable Network Access</label>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa fa-sitemap mr-md" aria-hidden="true"></i> Network</span>
+                              <select class="form-select" aria-label="Enable/Disable Network Access" id="networkSettings" >
+                                <option value="1">Enabled</option>
+                                <option value="0">Disabled</option>
+                              </select>
+                              <button class="btn btn-lg btn-info" type="button">Network Settings</button>
+                            </div>
+                          </div>
+                          <hr />
+                          <div class="col-12 mb-lg">
+                            <h4>USB</h4>
+                            <label for="enableUSB" class="form-label">Enable/Disable USB</label>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa fa-usb mr-md" aria-hidden="true"></i> USB</span>
+                              <select class="form-select" aria-label="Enable/Disable USB" id="enableUSB" >
+                                <option value="1">Enabled</option>
+                                <option value="0">Disabled</option>
+                              </select>
+                            </div>
+                          </div>
+                      
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-display" role="tabpanel" aria-labelledby="list-display-list">
+                  <h4>Display Settings</h4>
+                  <div class="col-12">
+                    <hr class="solid">
+                    <div class="col-12 pt-xlg pb-xlg">
+                        <div class="input-group">
+                            <span class="range-label" id="brightness-label">Brightness <i class="fa fa-lightbulb-o mr-md float-right" aria-hidden="true"></i></span>
+                            <input type="range" class="form-range" style="width: 600px;" id="brightness">
+                        </div>
+                    </div>
+                    <div class="col-12 pt-xlg pb-xlg">
+                        <div class="input-group">
+                            <span class="range-label" id="contrast-label">Contrast <i class="fa fa-adjust mr-md float-right" aria-hidden="true"></i></span>
+                            <input type="range" class="form-range" style="width: 600px;" id="customRange1">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12 pt-xlg pb-xlg">
+                        
+                          <h4>Template</h4>
+                          <label for="select-template" class="form-label">Light/Dark Template</label>
+                          <div class="input-group">
+                            <select class="form-select" id="select-template">
+                                <option>Light</option>
+                                <option>Dark</option>
+                            </select>
+                            <button class="btn btn-lg btn-info" type="button">Set template</button>
+                        </div>
+                      </div>
+                      
+                  </div>
+                </div> 
+            </div>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div id="sidemenu" class="dark" style="right:-400px;"></div>
+      <div class="bottom-menu " id="bottom-menu"></div>
+  </div>
+  </div>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/bottom-menu.js"></script>
+    <script src="js/notifications-module.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>
